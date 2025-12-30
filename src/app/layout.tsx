@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Logos Ilorin",
+  title: "Laniyan Abdul-Qawi - Developer Advocate & Software Engineer",
 };
 
 export default function RootLayout({
