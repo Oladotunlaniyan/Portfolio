@@ -195,8 +195,8 @@ export default function WritingTalksSection() {
         <p className="text-xs text-neutral-400 uppercase tracking-wider">
           Hover to pause · {items.length} total
         </p>
-        <p className="text-neutral-400 uppercase tracking-wider hover:text-neutral-900">
-          View all <a href="https://www.linkedin.com/in/abdul-qawi-laniyan/">articles & talks → </a> 
+        <p className="md:text-base text-neutral-400 uppercase tracking-wider hover:text-neutral-900">
+          View <a href="https://www.linkedin.com/in/abdul-qawi-laniyan/"> all → </a> 
         </p>
       </div>
     </section>

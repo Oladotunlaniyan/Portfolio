@@ -30,7 +30,7 @@ export default function AboutSection() {
           </div>
 
           {/* Subtle Expertise Markers */}
-          <div className="pt-8 border-t border-neutral-200">
+          <div className="pt-3 border-t border-neutral-200">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm text-neutral-500 uppercase tracking-wider">
               <div>
                 <div className="font-medium text-neutral-900 mb-1">Stack</div>
@@ -52,7 +52,7 @@ export default function AboutSection() {
           </div>
 
           {/* Philosophy */}
-          <div className="pt-12 space-y-4">
+          <div className="pt-6 space-y-4">
             <blockquote className="text-2xl md:text-3xl font-light text-neutral-900 leading-relaxed italic">
               "The best user experience is invisible. You only notice it 
               when it's absent."
@@ -61,7 +61,7 @@ export default function AboutSection() {
           </div>
         
         {/* Footer Note*/}
-        <div className="mt-32 pt-8 border-t border-neutral-200 text-sm text-neutral-400 text-center">
+        <div className="mt-28 pt-4 border-t border-neutral-200 text-sm text-neutral-400 text-center">
           Currently exploring the future of AI-assisted development · Open to developer and advocacy roles
         </div>
       </div>
