@@ -1,3 +1,4 @@
+"use client";
 import { Github } from 'lucide-react';
 import Project1 from '../../assets/project1.png';
 import Project2 from '../../assets/project2.png'; 
@@ -5,6 +6,7 @@ import Project3 from '../../assets/project3.png';
 import Projeect4 from '../../assets/project4.png';
 import Project5 from '../../assets/project5.png';
 import Project6 from '../../assets/project6.png';
+import { AnimatedDiv } from '@/components/animatedText';
 
 export default function RecentProjects() {
   const projects = [
@@ -60,7 +62,7 @@ export default function RecentProjects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <AnimatedDiv delay={0.1} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <a
               key={index}
@@ -90,11 +92,11 @@ export default function RecentProjects() {
               </div>
             </a>
           ))}
-        </div>
+        </AnimatedDiv>
       </div>
        <div className="px-6 mt-8 max-w-7xl mx-auto w-full justify-between items-center">
         <p className="text-neutral-400 uppercase tracking-wider hover:text-neutral-900">
-          View all of my boring & interesting <a href="https://github.com/Oladotunlaniyan">Projects → </a> 
+          View all of my  <a href="https://github.com/Oladotunlaniyan">Projects → </a> 
         </p>
       </div>
     </section>

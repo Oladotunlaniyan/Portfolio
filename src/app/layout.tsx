@@ -1,19 +1,19 @@
-import type { Metadata } from "next";
 import "./globals.css";
+import { ThemeProvider } from "./theme-provider";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Laniyan Abdul-Qawi - Developer Advocate & Software Engineer",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

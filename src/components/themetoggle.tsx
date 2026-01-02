@@ -1,26 +1,38 @@
+"use client";
+
 import { motion, AnimatePresence } from "motion/react";
 import { Sun, Moon } from "lucide-react";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
-interface ThemeToggleProps {
-  isDark: boolean;
-  setIsDark: (value: boolean) => void;
-}
+const ThemeToggle = () => {
+  const { theme, setTheme, systemTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-const ThemeToggle: React.FC<ThemeToggleProps> = ({ isDark, setIsDark }) => {
+  // prevent hydration mismatch
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
+
+  const currentTheme = theme === "system" ? systemTheme : theme;
+
   return (
     <motion.button
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 0.5 }}
-      onClick={() => setIsDark(!isDark)}
+      onClick={() =>
+        setTheme(currentTheme === "dark" ? "light" : "dark")
+      }
       className={`cursor-pointer absolute top-6 right-6 z-20 p-3 rounded-full ${
-        isDark ? 'bg-white/10 hover:bg-white/20' : 'bg-neutral-900/10 hover:bg-neutral-900/20'
+        currentTheme === "dark"
+          ? "bg-white/10 hover:bg-white/20"
+          : "bg-neutral-900/10 hover:bg-neutral-900/20"
       } backdrop-blur-sm transition-all duration-300`}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
       <AnimatePresence mode="wait">
-        {isDark ? (
+        {currentTheme === "dark" ? (
           <motion.div
             key="sun"
             initial={{ rotate: -90, opacity: 0 }}

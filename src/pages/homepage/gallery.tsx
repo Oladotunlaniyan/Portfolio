@@ -7,11 +7,17 @@ import Gallery3 from "../../assets/gallery3.jpg";
 import Gallery2 from "../../assets/gallery2.png";
 import Gallery7 from "../../assets/gallery7.png";
 
+import { useTheme } from "next-themes";
 import { useState, useEffect, useRef } from 'react';
+import { AnimatedH2 } from "@/components/animatedText";
 
 export default function WritingTalksSection() {
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const [isPaused, setIsPaused] = useState(false);
+
+  const { theme, systemTheme } = useTheme();
+  const currentTheme = theme === "system" ? systemTheme : theme;
+  const isDark = currentTheme === "dark";
 
   const items = [
     {
@@ -99,14 +105,14 @@ export default function WritingTalksSection() {
 }, [isPaused]);
 
   return (
-    <section className="min-h-screen bg-white flex flex-col justify-center py-20 overflow-hidden">
+    <section className="min-h-screen bg-white flex flex-col justify-center py-20 overflow-hidden dark:bg-neutral-950 transition-colors duration-700">
       {/* Header */}
       <div className="px-6 mb-12 max-w-7xl mx-auto w-full">
         <div className="flex items-baseline justify-between">
           <div className="flex items-baseline gap-4">
-            <h2 className="text-4xl md:text-5xl font-light text-neutral-900">
+            <AnimatedH2 delay={0.3} className="text-4xl md:text-5xl font-light text-neutral-900 dark:text-white">
               Writing & Talks
-            </h2>
+            </AnimatedH2>
             <span className="text-sm text-neutral-400 uppercase tracking-wider">
               Recent
             </span>
