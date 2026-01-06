@@ -56,7 +56,7 @@ const isDark = currentTheme === "dark";
         </div>
       </AnimatedDiv>
 
-      <AnimatedDiv delay={0.7} className="pt-6 space-y-4">
+      <AnimatedDiv delay={0.4} className="pt-6 space-y-4">
         <blockquote className="text-2xl md:text-3xl font-light text-neutral-900 dark:text-black leading-relaxed italic">
           "The best user experience is invisible. You only notice it 
           when it's absent."

@@ -1,5 +1,13 @@
+"use client";
+import { useTheme } from "next-themes"
+
+
 
 const Newsletter = () => {
+const { theme, systemTheme } = useTheme();
+const currentTheme = theme === "system" ? systemTheme : theme;
+const isDark = currentTheme === "dark";
+
   return (
     <div className="py-20 px-6 bg-white text-center align-middle">
     <div className="max-w-4xl mx-auto text-center">
@@ -13,7 +21,7 @@ const Newsletter = () => {
     
     {/* Newsletter Embed */}
     <div className="justify-center align-middle text-center">
-     <iframe src="https://laniyanabdulqawi.substack.com/embed" className="w-full h-full border:1px solid #EEE; background:white;" ></iframe>
+     <iframe src="https://laniyanabdulqawi.substack.com/embed" className="w-full h-full" ></iframe>
     </div>
   </div>
 </div>

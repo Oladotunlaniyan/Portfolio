@@ -96,7 +96,7 @@ export default function RecentProjects() {
       </div>
        <div className="px-6 mt-8 max-w-7xl mx-auto w-full justify-between items-center">
         <p className="text-neutral-400 uppercase tracking-wider hover:text-neutral-900">
-          View all of my  <a href="https://github.com/Oladotunlaniyan">Projects → </a> 
+          View all of my <a href="https://github.com/Oladotunlaniyan">Projects → </a> 
         </p>
       </div>
     </section>
